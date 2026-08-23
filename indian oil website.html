@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndianOil Energy Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef4ff);
+}
+
+/* HEADER */
+header{
+    background:#003f8a;
+    color:#fff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+.logo{
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.logo span{
+    color:#ff7a00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none; 
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff7a00;
+}
+:root{
+    --primary:#003f8a;
+    --secondary:#ff7a00;
+    --dark:#0d1b2a;
+    --light:#f5f7fa;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url(https://content.jdmagicbox.com/comp/chittoor/d9/9999p8572.8572.230201224608.e7d9/catalogue/ramgams-fuel-station-iocl-p-kothakota-chittoor-petrol-pumps-nvvcotphhc.jpg);
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:78px;
+     font-weight:900;
+    margin-bottom:20px;
+    text-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:linear-gradient(
+        135deg,
+        #ff7a00,
+        #ff9a3c
+    );
+    color:white;
+    padding:16px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.4s;
+}
+.stats{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:80px 8%;
+    background:#f8f9fb;
+}
+
+.stat-box{
+    flex:1;
+    background:#fff;
+    padding:35px 20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    border-top:4px solid #ff7a00;
+
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h2{
+    font-size:42px;
+    color:#003f8a;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#666;
+    font-size:16px;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,122,0,.4);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#003f8a;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#ff7a00;
+    display:block;
+    margin:12px auto;
+}
+
+/* SERVICES */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+     background:#f8fafc;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+.card i{
+    font-size:55px;
+    color:#ff7a00;
+    margin:20px 0;
+    transition:.4s;
+}
+
+.card:hover i{
+    transform:scale(1.2) rotate(5deg);
+    color:#003f8a;
+}
+.card h3{
+    color:#003f8a;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.7;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+    text-align:center;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* CONTACT */
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+     background:#f8fafc;
+}
+.stat-box i{
+    font-size:45px;
+    color:#ff7a00;
+    margin-bottom:20px;
+    display:block;
+}
+
+.contact-form,
+.station-card{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+input,
+textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:2px solid #eee;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#ff7a00;
+    outline:none;
+    box-shadow:0 0 15px rgba(255,122,0,.2);
+}
+
+button{
+    background:#ff7a00;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#e46700;
+}
+
+.station-card h3{
+    color:#003f8a;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.station-card p{
+    margin-bottom:12px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+    background:#002b60;
+    color:white;
+    text-align:center;
+    padding:35px;
+    font-size:16px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav ul li{
+        margin:10px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
+
+.card,
+.btn,
+.station-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        Indian<span>Oil</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <h1>Powering India's Energy Future</h1>
+
+        <p>
+            Reliable fuel, LPG, lubricants and
+            advanced energy solutions for every customer.
+        </p>
+
+        <a href="#services" class="btn">
+            Explore Services
+        </a>
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="cards">
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <div class="card">
+            <h3>Fuel Stations</h3>
+              <i class="fa-solid fa-gas-pump"></i>
+            <p>
+                Premium Petrol, Diesel, XP95 and
+                modern fuel station facilities.
+            </p>
+        </div>
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <div class="card">
+            <h3>Lubricants</h3>
+            <i class="fa-solid fa-oil-can"></i>
+            <p>
+                High-performance engine oils and
+                industrial lubricants.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Commercial LPG</h3>
+                <i class="fa-solid fa-fire-flame-simple"></i>
+            <p>
+                Reliable LPG supply solutions for
+                businesses and industries.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>EV Charging</h3>
+             <i class="fa-solid fa-bolt"></i>
+            <p>
+                Fast and smart EV charging
+                infrastructure across India.
+            </p>
+        </div>
+<div class="card">
+    <h3>Rewards Program</h3>
+    <i class="fa-solid fa-gift"></i>
+    <p>
+        Earn reward points and enjoy
+        exclusive customer benefits.
+    </p>
+</div>
+
+</section>
+<section class="stats">
+
+    <div class="stat-box">
+        <i class="fas fa-gas-pump"></i>
+        <h2>35,000+</h2>
+        <p>Fuel Stations</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-users"></i>
+        <h2>150M+</h2>
+        <p>Customers Served</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-headset"></i>
+        <h2>24×7</h2>
+        <p>Support Available</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-award"></i>
+        <h2>60+</h2>
+        <p>Years of Trust</p>
+    </div>
+
+
+</section>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="section-title">About Us</h2>
+
+    <p>
+        IndianOil is committed to delivering reliable
+        energy solutions, supporting sustainable growth,
+        and serving millions of customers with excellence,
+        innovation, and world-class service standards.
+    </p>
+
+</section>
+<section class="testimonials">
+
+<h2 class="section-title">
+Customer Reviews
+</h2>
+<div class="about-container">
+   <img src="your-image.jpg">
+   <div>
+      <h2>About IndianOil</h2>
+      <p>...</p>
+   </div>
+</div>
+
+<div class="cards">
+
+<div class="card">
+    <p>
+        Excellent fuel quality and
+        professional service.
+    </p>
+    <h4>- Rajesh Kumar</h4>
+</div>
+
+<div class="card">
+    <p>
+        Fast service and trusted brand.
+    </p>
+    <h4>- Amit Sharma</h4>
+</div>
+
+<div class="card">
+    <p>
+        Best fuel station experience.
+    </p>
+    <h4>- Neha Verma</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+        <!-- FORM -->
+     <form id="contactForm">
+
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" placeholder="Email Address" required>
+
+    <textarea id="message"
+    rows="6"
+    placeholder="Your Message"
+    required></textarea>
+
+    <button type="submit">
+        Send Message
+    </button>
+    <iframe
+src="https://maps.google.com/maps?q=palwal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="250"
+style="border:0;border-radius:12px;">
+</iframe>
+
+</form>
+
+<script>
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const message =
+    document.getElementById("message").value;
+
+    console.log(name, email, message);
+
+    alert("Message submitted successfully!");
+
+    this.reset();
+});
+</script>
+
+        <!-- STATION CARD -->
+        <div class="station-card">
+
+            <h3>IndianOil - Vashisth Fuel Station</h3>
+
+            <p>
+                <strong>Owner:</strong>
+                Ravi Sharma
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                NH-19, Palwal, Haryana
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                +91 9992199002
+            </p>
+
+            <p>
+                <strong>Hours:</strong>
+                Open 24×7
+            </p>
+
+
+            <br>
+<a href="https://maps.app.goo.gl/VRYpfHmNf8t4MEKi9"
+   target="_blank"
+   class="btn">
+   View Location
+</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+```
+<div class="social-icons">
+
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+    <a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+<p>
+    © 2026 IndianOil Energy Services.
+    All Rights Reserved.
+</p>
+
+
+</footer>
+</body>
+</html>
